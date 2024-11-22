@@ -1,11 +1,13 @@
 import express from "express";
-import userRoute from "./src/routes/user-rout.js";
+import userRoute from "./src/routes/user-route.js";
 
 const app = express();
+const port = 3000;
 
-app.use("/soma", userRoute)
+app.use(express.json());
+app.use("/user", userRoute)
 
-app.listen(3000, () => {
-    console.log("Servidosr esciantdo");
+app.listen(port, () => {
+    console.log("Servidor escutando em", {port});
 });
 
