@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import soma from '../controllers/user-controller.js';
+import creteUser from '../controllers/user-controller.js';
 
 const route = Router();
-route.get("/", soma);
+
+route.get("/", )
+route.post("/", creteUser);
 
 export default route;   
 
